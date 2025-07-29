@@ -1,0 +1,115 @@
+.slideshow-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  margin: 1rem auto;
+  max-width: 90%;
+  min-height: 70vh;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.slideshow-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.slideshow-counter {
+  text-align: center;
+  color: #4a6fa5;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.slideshow-quote {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #4a6fa5;
+}
+
+.slideshow-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: left;
+  color: #333;
+  margin: 0;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.slideshow-text::before {
+  content: '"';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 2rem;
+  color: #4a6fa5;
+  opacity: 0.5;
+  line-height: 1;
+}
+
+.slideshow-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.slideshow-button {
+  flex: 1;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  background-color: #4a6fa5;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.slideshow-button:hover {
+  background-color: #3a5a80;
+}
+
+.slideshow-button:active {
+  transform: translateY(1px);
+}
+
+.slideshow-container.loading,
+.slideshow-container.error,
+.slideshow-container.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #666;
+}
+
+@media (min-width: 768px) {
+  .slideshow-container {
+    max-width: 700px;
+    padding: 2rem;
+  }
+  
+  .slideshow-text {
+    font-size: 1.4rem;
+  }
+  
+  .slideshow-button {
+    padding: 0.75rem 1.5rem;
+  }
+}

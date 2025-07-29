@@ -1,0 +1,36 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: 60px; /* Space for footer */
+}
+
+.app-header {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background-color: var(--color-primary-dark);
+  color: white;
+}
+
+.app-title {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.app-content {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .app-title {
+    font-size: 2.2rem;
+  }
+}
